@@ -1,19 +1,187 @@
-body {
-	background-color: #b3cce6;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200;400&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-h1 {
-	font-family: 'Fira Sans', sans-serif;
-	font-weight: 400;
-	text-align: center;
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background-color: #393e46;
+	color: #eeeeee;
 }
 
 nav {
-	font-family: 'Fira Sans', sans-serif;
-	font-weight: 300;
-	text-align: center;
+	background-color: #222831;
+	padding: 0 15px;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; 
 }
 
-#bio {
+a {
+	font-family: 'Poppins', sans-serif;
+	color: #eeeeee;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00adb5;
+	text-decoration: underline;
+}
+
+.menu {
+	list-style-type: none;
+	position: sticky;
+}
+
+.index {
+	font-size: 20px;
+	padding: 7.5px 10px 7.5px 0;
+}
+
+.item {
+	padding: 10px;
+}
+
+h2, h3 {
 	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
+	text-decoration: underline;
+}
+
+/* jump to correct place with a fixed nav */
+#about:before, #projects:before, #photography:before, #contact:before {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    margin-top: -6em;
+    height: 6em;
+}
+
+#about {
+	margin-top: 100px;
+}
+
+#about p, ul {
+	margin: 10px auto;
+	width: 80%;
+}
+
+.container {
+	display: flex;
+	width: 90vw;
+	margin: 0 auto;
+}
+
+.panel {
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 70vh;
+	cursor: pointer;
+	flex: 0.5;
+	margin: 10px;
+	border-radius: 3em;
+	transition: flex 1s ease-in;
+}
+
+.panel.active {
+	flex: 5;
+}
+
+.container div:nth-of-type(1) {
+	background-image: url("panel1.JPG");
+}
+
+.container div:nth-of-type(2) {
+	background-image: url("panel2.jpeg");
+}
+
+.container div:nth-of-type(3) {
+	background-image: url("panel3.JPG");
+}
+
+.container div:nth-of-type(4) {
+	background-image: url("panel4.JPG");
+}
+
+.container div:nth-of-type(5) {
+	background-image: url("panel5.JPG");
+}
+
+
+/* Mobile menu */
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu li a {
+	display: block;
+	padding: 15px 5px;
+}
+
+.toggle {
+	order: 1;
+	font-size: 20px;
+}
+
+.item {
+	order: 3;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+.active .item {
+	display: block;
+}
+
+  
+/* Tablet menu */
+@media all and (min-width: 700px) {
+	.menu {
+		justify-content: center;
+	}
+	
+	.index {
+		flex: 1;
+	}
+
+	.toggle {
+	  flex: 1;
+	  text-align: right;
+	  order: 2;
+	}
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+	.menu {
+		align-items: flex-start;
+		flex-wrap: nowrap;
+		background: none;
+	}
+
+	.index {
+		order: 0;
+	}
+
+	.item {
+		order: 1;
+		position: relative;
+		display: block;
+		width: auto;
+	}
+
+	.toggle {
+		display: none;
+	}
 }
