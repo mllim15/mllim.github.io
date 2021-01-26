@@ -17,6 +17,7 @@ nav {
 	background-color: #222831;
 	padding: 0 15px;
 	position: fixed;
+	z-index: 1;
     left: 0;
     top: 0;
     width: 100%; 
@@ -72,7 +73,22 @@ h2, h3 {
 	width: 80%;
 }
 
-.container {
+#about ul {
+	list-style: none;
+}
+
+#projects p {
+	margin: 10px auto;
+	width: 80%;
+}
+
+#contact p {
+	margin: 10px auto;
+	width: 80%;
+	text-align: center;
+}
+
+.photo-container {
 	display: flex;
 	width: 90vw;
 	margin: 0 auto;
@@ -94,26 +110,95 @@ h2, h3 {
 	flex: 5;
 }
 
-.container div:nth-of-type(1) {
+.photo-container div:nth-of-type(1) {
 	background-image: url("panel1.JPG");
 }
 
-.container div:nth-of-type(2) {
+.photo-container div:nth-of-type(2) {
 	background-image: url("panel2.jpeg");
 }
 
-.container div:nth-of-type(3) {
+.photo-container div:nth-of-type(3) {
 	background-image: url("panel3.JPG");
 }
 
-.container div:nth-of-type(4) {
+.photo-container div:nth-of-type(4) {
 	background-image: url("panel4.JPG");
 }
 
-.container div:nth-of-type(5) {
+.photo-container div:nth-of-type(5) {
 	background-image: url("panel5.JPG");
 }
 
+
+.card {
+	width: 350px;
+	height: 450px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 3% auto;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	border-radius: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.card .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+	margin-bottom: 20%;
+}
+
+.card:hover .content {
+	transform: translateY(-20px);
+}
+
+.card .content .avi {
+	position: relative;
+	width: 15em;
+	height: 15em;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 10px solid #222831;
+}
+
+.card .content .avi img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card .social {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+
+}
+
+.card .social li {
+	list-style: none;
+	margin: 0 auto;
+	transform: translateY(40px);
+	opacity: 0.5;
+	transition: transform 0.5s;
+	transition-delay: calc(0.1s * var(--i));
+}
+
+.card:hover .social li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.card .social li a {
+	font-size: 45px;
+}
 
 /* Mobile menu */
 .menu {
@@ -143,6 +228,14 @@ h2, h3 {
 .active .item {
 	display: block;
 }
+
+@media(max-width: 500px) {
+	/* hide the fourth and fifth panels */
+	.panel:nth-of-type(4), .panel:nth-of-type(5) {
+		display: none;
+	}
+}
+
 
   
 /* Tablet menu */
