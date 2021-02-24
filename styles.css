@@ -253,3 +253,66 @@ is under 600px */
 .card .social li a {
 	font-size: 45px;
 }
+
+@media (max-width: 950px) {
+	.about-text {
+		width: 90%;
+	}
+
+	#welcome h1 {
+        font-size: 3rem;
+    }
+
+	.cloud1 {
+        /* width: 250vw; */
+        display: none;
+    }
+
+    .cloud2 {
+    /* right: 0;
+    width: 150vw; */
+    display: none;
+    }
+
+    .cloud3 {
+    /* bottom: 0;
+    width: 150vw; */
+    display: none;
+    }
+}
+/*
+@media (max-width: 660px) {
+	.cloud1 {
+    top: -30vw;
+    right: -120vw;
+    width: 300vw;
+    }
+
+    .cloud2 {
+    bottom: 0;
+    width: 200vw;
+    }
+    
+    .cloud3 {
+    left: 0;
+    width: 200vw;
+    }
+}
+
+@media (max-width: 450px) {
+	.cloud1 {
+		top: 0;
+    }
+
+	.cloud2 {
+    right: 0;
+    width: 250vw;
+    }
+    
+    .cloud3 {
+    bottom: 0;
+    left: -75vw;
+    width: 300vw;
+    }
+}
+*/
