@@ -2,113 +2,154 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Michelle Lim</title>
-	<link rel="icon" href="cat_title_icon.png" type="image/png style = " background-color: transparent;">
-	<link rel="stylesheet" href="mystylesheet.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle Lim</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- title icon -->
+    <link rel="icon" href="photos/cat_title_icon.png" type="image/png style = " background-color: transparent;">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<nav>
-		<ul class="menu">
-			<li class="index"><a href="/">Michelle Lim</a></li>
-			<li class="item"><a href="#about">About</a></li>
-			<li class="item"><a href="#projects">Projects</a></li>
-			<li class="item"><a href="#photography">Photography</a></li>
-			<li class="item"><a href="#contact">Contact</a></li>
-			<li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-		</ul>
-	</nav>
+    <nav id="nav" class="fixed-top navbar navbar-expand-lg navbar-light">
+        <div id="nav-container" class="container-fluid">
+            <a id="nav-name" class="navbar-brand" href="/">Michelle Lim</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-ul-container"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar-ul-container" class="collapse navbar-collapse">
+                <ul id="nav-ul" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#welcome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#photography">Photography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<div id="about">
-		<h2>About Me</h2>
-		<p>Hello! My name is Michelle Lim. I am a graduate of California State Polytechnic University, Pomona
-			and have a Bachelor of Science in Computer Science. I am aspiring to be a front end developer,
-			although I do have some knowledge in back end as well. I am also interested in game and mobile development.
-		</p>
-		<h3>Fun Facts</h3>
-		<ul>
-			<li>I love photography! I enjoy both digital and film photography.
-				I currently own a: <ul>
-					<li>Canon EOS Rebel T6</li>
-					<li>Canon T70</li>
-					<li>Canon Jet135</li>
-					<li>Minolta Freedom Zoom 150</li>
-				</ul>
-			</li>
-			<li>I have one cat named Tiger! He is an orange tabby and usually the main subject of my photography.
-				He was born on April 28 in 2018.
-			</li>
-			<li>In my free time I enjoy watching movies and anime.
-				One of my favorite movies is Sympathy for Lady Vengeance (2005) and
-				one of my favorite anime is Erased (2016).</li>
-		</ul>
-	</div>
+    <div id="welcome" class="page-section">
+        <h1 class="translateY" data-speed="0.5">Michelle Lim</h1>
 
-	<div id="projects">
-		<h2>Projects</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, officiis obcaecati expedita, itaque iusto
-			fugit impedit harum quaerat corrupti nam repellendus tempore alias quibusdam odit soluta laborum nulla
-			veritatis. Totam.
-			Eaque ipsum adipisci quo nulla nam sit officiis maiores eius numquam eos deserunt quia earum illum beatae
-			ipsam nihil soluta blanditiis eveniet neque reiciendis, maxime ea sunt voluptatem. Vitae, neque?
-			Nostrum aliquid nam dicta sit! Dicta ullam beatae odit nisi officiis, doloribus dolor libero labore voluptas
-			ut unde blanditiis soluta est magni magnam neque, sit tempore odio dolore pariatur placeat?
-			Provident saepe praesentium magnam est eveniet, aut explicabo voluptas accusamus voluptatum necessitatibus
-			aspernatur modi excepturi debitis aperiam corrupti. Enim error quo cupiditate ipsa, labore non? Recusandae
-			perspiciatis a temporibus assumenda.
-			Veniam temporibus similique, est, recusandae, delectus nostrum illo placeat numquam possimus assumenda neque
-			culpa! Omnis, eligendi sed vero ullam alias beatae recusandae nesciunt minima voluptatum veritatis.
-			Dignissimos nihil quibusdam facere.</p>
-	</div>
+        <img src="photos/cloud1.png" alt="" class="cloud1 translateY" data-speed="-3">
+        <img src="photos/cloud2.png" alt="" class="cloud2 translateX" data-speed="3">
+        <img src="photos/cloud3.png" alt="" class="cloud3 translateX" data-speed="-3">
+    </div>
 
-	<div id="photography">
-		<h2>Photography</h2>
-		<div class="photo-container">
-			<div class="panel"></div>
-			<div class="panel"></div>
-			<div class="panel active"></div>
-			<div class="panel"></div>
-			<div class="panel"></div>
-		</div>
-	</div>
+    <div id="about" class="page-section">
+        <div class="shadow"></div>
 
-	<div id="contact">
-		<h2>Contact</h2>
-		<section>
-			<div class="card">
-				<div class="content">
-					<div class="avi">
-						<img src="avi.jpeg" alt="Picture of me">
-					</div>
-				</div>
+        <h2>About</h2>
+        <div class="about-text">
+            <p>Hello! My name is Michelle Lim. I am a graduate of California State Polytechnic University, Pomona
+                and have a Bachelor of Science in Computer Science. I am aspiring to be a front end developer,
+                although I do have some knowledge in back end as well. I am also interested in game and mobile
+                development.
+            </p>
+            <h3>Fun Facts</h3>
+            <ul>
+                <li class="bottom-border">I have one cat named Tiger! He is an orange tabby and usually the main subject
+                    of my photography.<br>He was born on April 28 in 2018.
+                </li>
+                <li>I love photography! I enjoy both digital and film photography.
+                    I currently own a: <ul>
+                        <li>Canon EOS Rebel T6</li>
+                        <li>Canon T70</li>
+                        <li>Canon Jet135</li>
+                        <li>Minolta Freedom Zoom 150</li>
+                    </ul>
+                </li>
+                <li class="top-border">In my free time I enjoy watching movies and anime.
+                    One of my favorite movies is Sympathy for Lady Vengeance (2005) and
+                    one of my favorite anime is Erased (2016).
+                </li>
+            </ul>
+        </div>
+    </div>
 
-				<ul class="social">
-					<li style="--i:1">
-						<a href="https://www.linkedin.com/in/mllim15/" target="_blank">
-							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li style="--i:2">
-						<a href="https://github.com/mllim15" target="_blank">
-							<i class="fa fa-github-square" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li style="--i:3">
-						<a href="https://twitter.com/michlim15" target="_blank">
-							<i class="fa fa-twitter-square" aria-hidden="true"></i>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</div>
+    <div id="projects" class="page-section">
+        <h2>Projects</h2>
+    </div>
 
-	<script src="script.js"></script>
+    <div id="photography" class="page-section">
+        <h2 id="photo-title">Photography</h2>
+
+        <div class="photo-container">
+            <div class="panel" style="background-image: url('photos/panel1.JPG');">
+            </div>
+            <div class="panel" style="background-image: url('photos/panel2.jpeg');">
+            </div>
+            <div class="panel active" style="background-image: url('photos/panel3.JPG');">
+            </div>
+            <div class="panel" style="background-image: url('photos/panel4.JPG');">
+            </div>
+            <div class="panel" style="background-image: url('photos/panel5.JPG');">
+            </div>
+        </div>
+
+        <a target="blank" href="https://www.flickr.com/photos/mllim/">View more</a>
+    </div>
+
+    <div id="contact" class="page-section">
+        <h2>contact</h2>
+
+        <section>
+            <div class="card">
+                <div class="content">
+                    <div class="avi">
+                        <img src="photos/avi.jpeg" alt="Picture of me">
+                    </div>
+                </div>
+
+                <ul class="social">
+                    <li style="--i:1">
+                        <a href="https://www.linkedin.com/in/mllim15/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li style="--i:2">
+                        <a href="https://github.com/mllim15" target="_blank">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+                    <li style="--i:3">
+                        <a href="https://twitter.com/michlim15" target="_blank">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
