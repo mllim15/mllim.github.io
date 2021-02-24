@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #8BC6EC;
+    background-image: linear-gradient(180deg, #e29cff 0%, #9599E2 50%,#8BC6EC 100%); */
+    background-color: #2462ad;
+    background-image: linear-gradient(90deg, #2462ad 0%, #9FACE6 100%);
+}
+
+ul, li {
+    padding-left: 0px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+nav {
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+}
+
+a {
+	color: #222831;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #eeeeee;
+}
+
+#nav {
+    background-color: #eeeeee;
+    opacity: 0.8;
+}
+
+/* jump to correct place with a fixed nav */
+#photo-title:before {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    margin-top: -4em;
+    height: 6em;
+}
+
+/* so that navigation items (home, about project, photography, contact) are at the right of the page */
+@media (min-width: 992px) {
+    #navbar-ul-container {
+        flex-grow: 0;
+    }
+}
+
+.page-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#welcome {
+    width: 100%; 
+    background-image: url("photos/background.jpeg");
+    position: relative;
+	overflow: hidden;
+}
+#welcome::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+#welcome h1 {
+    z-index: 50;
+    font-size: 5rem;
+}
+.cloud1, .cloud2, .cloud3 {
+    position: absolute;
+}
+.cloud1 {
+    top: 0;
+    right: 0;
+    width: 130vw;
+}
+.cloud2 {
+    /* display: none; */
+    bottom: 0;
+    right: -15%;
+    width: 100vw;
+    z-index: 20;
+}
+.cloud3 {
+    /* display: none; */
+    bottom: -50px;
+    left: 0;
+    width: 80vw;
+    z-index: 19;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 100%;
+    height: 300px;
+    width:  100%;
+    left: 0;
+    z-index: 20;
+    background: linear-gradient(to top, #8FAFE7, transparent);
+}
+
+#about {
+    text-align: center;
+    position: relative;
+}
+.about-text {
+    width: 55%;
+}
+#about ul {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+#about h3 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.top-border {
+    border-top: 1px solid black;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+.bottom-border {
+    border-top: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.photo-container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* initial width of the panels 
+    we will change this value when a panel is active */
+    flex: 0.5;
+
+    background-size: auto 100%;
+    height: 70vh;
+    border-radius: 3em;
+    margin: 10px;
+    position: relative;
+    transition: flex 1s ease-in;
+}
+.panel.active {
+    flex: 5;
+}
+/* following styles will only execute if the screen
+is under 600px */
+@media(max-width: 600px) {
+    .photo-container {
+        width: 100vw;
+    }
+
+    /* hide the fourth and fifth panels */
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+         display: none;
+    }
+}
+
+#photography a {
+    background-color: #eeeeee;
+    padding: 1rem 2rem; 
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#photography a:hover {
+    background-color: #222831;
+}
+
+.card {
+	width: 350px;
+	height: 450px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 3% auto;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	border-radius: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+.card .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+	margin-bottom: 20%;
+}
+.card:hover .content {
+	transform: translateY(-20px);
+}
+.card .content .avi {
+	position: relative;
+	width: 15em;
+	height: 15em;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 10px solid #222831;
+    opacity: 0.8;
+}
+.card .content .avi img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.card .social {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+
+}
+.card .social li {
+	list-style: none;
+	margin: 0 1rem;
+	transform: translateY(40px);
+	opacity: 0.5;
+	transition: transform 0.5s;
+	transition-delay: calc(0.1s * var(--i));
+}
+.card:hover .content .avi {
+    opacity: 1;
+}
+.card:hover .social li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+.card .social li a {
+	font-size: 45px;
+}
